@@ -1,7 +1,5 @@
 package org.LearnJava;
 
-import com.sun.source.tree.WhileLoopTree;
-
 //.length() works only for String or array types
 public class RevampSupport extends JavaRevamp {
     static int A = 55;
@@ -83,5 +81,86 @@ public class RevampSupport extends JavaRevamp {
         }
     }
 
+    //LEVEL 2 — Loop Practice
+//Print all numbers between 1 and 50 that are divisible by 3.
+    public void divisibleByThree() {
+        for (int i = 1; i <= 50; i++) {
+            if (i % 3 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public void divisibleByTwo() {
+        for (int i = 1; i <= 50; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    //Count how many numbers between 1 and 100 are divisible by both 3 and 5.
+    public void oneToHundredDivBy3and5() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+    //&& AND op
+
+    //Reverse a given number
+    public void reverseANumber() {
+        long num = 123456;
+        long temp = num;
+        String numStr = String.valueOf(temp);
+        String revNumber = "";
+        for (int i = numStr.length() - 1; i >= 0; i--) {
+            revNumber += numStr.charAt(i);
+        }
+        System.out.println(revNumber);
+    }
+
+    //Check whether a number is a palindrome.
+    public void numPalindrome() {
+        int num = 9339;
+        String numStr = String.valueOf(num);
+        String rev = "";
+        for (int i = numStr.length() - 1; i >= 0; i--) {
+            rev += numStr.charAt(i);
+        }
+        System.out.println("Reversed:" + rev);
+        if (numStr.equals(rev)) {
+            System.out.println("It is a palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+    }
+
+    //Count the total number of digits in a given number.
+    public void countOfNumberOfDigitsInNum() {
+        int num = 70921;
+        String numStr = String.valueOf(num);
+        System.out.println(numStr.length());
+    }
+
+    //using While Loop
+
+    public void countOfNumberOfDigitsInNumViaWhile() {
+        int num = 170476;
+        int count = 0;
+        int temp = num;
+        while (temp != count) {
+            temp = temp / 10;
+            count++;
+        }
+    }
+
+    //VIA Math
+    public void simpleCount() {
+    int num = 8899001;
+    int digit = (int)Math.log(num)+1;
+        System.out.println(digit);
+    }
 
 }

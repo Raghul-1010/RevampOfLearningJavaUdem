@@ -18,7 +18,14 @@ public class JavaRevamp {
         RevampSupport.evenOrOdd(); //Static Method
         classObj.removeLastDigit();
         classObj.removeLastDigitSimple();
-        classObj.extractLastDigit();*/
+        classObj.extractLastDigit();
         classObj.extractFirstDigit();
+        classObj.divisibleByThree();
+        classObj.divisibleByTwo();
+        classObj.oneToHundredDivBy3and5();
+        lassObj.reverseANumber();
+        classObj.numPalindrome();
+        classObj.countOfNumberOfDigitsInNum();*/
+        classObj.simpleCount();
     }
 }
