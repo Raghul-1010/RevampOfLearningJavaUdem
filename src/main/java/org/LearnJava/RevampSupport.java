@@ -158,9 +158,27 @@ public class RevampSupport extends JavaRevamp {
 
     //VIA Math
     public void simpleCount() {
-    int num = 8899001;
-    int digit = (int)Math.log(num)+1;
+        int num = 8899001;
+        int digit = (int) Math.log(num) + 1;
         System.out.println(digit);
+    }
+
+    //Split given number to hours and minutes.
+    public void splitTime(int num) {
+        int hours = num / 60;
+        int minutes = num % 60;
+        System.out.printf("%d:%02d", hours, minutes);
+
+    }
+
+    //Reverse the time format to minutes format
+    public void revTimeFormat(String time){
+        String[] parts = time.split(":");
+        int hours = Integer.parseInt(parts[0]);
+        int minutes = Integer.parseInt(parts[1]);
+        int totalMinutes = (hours*60)+minutes;
+        System.out.print("Total minutes = " + totalMinutes);
+
     }
 
 }
